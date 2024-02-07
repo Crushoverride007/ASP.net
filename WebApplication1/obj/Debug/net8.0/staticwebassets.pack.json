@@ -1,0 +1,101 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\20240206105535451.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20240206105535451.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\20240206125504451.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20240206125504451.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\20240206125602032.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20240206125602032.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\20240206125649028.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20240206125649028.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\20240206143312759.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20240206143312759.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\alpha_a6000.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\alpha_a6000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\bluetooth_headphones.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\bluetooth_headphones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\eos_rebel_t7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\eos_rebel_t7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\hero9_black.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\hero9_black.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\inspiron_15.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\inspiron_15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\ipad_air.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\ipad_air.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\laserjet_printer.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\laserjet_printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\macbook_pro.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\macbook_pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\officejet_pro.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\officejet_pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\pixma_mg3620.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\pixma_mg3620.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\portable_ssd.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\portable_ssd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\samsungs21.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\samsungs21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\smartwatch.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\smartwatch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\usb_c_hub.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\usb_c_hub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\youne\\OneDrive\\Documents\\SUPINFO\\B3 ENG\\netcore\\ibay\\WebApplication1\\WebApplication1\\wwwroot\\images\\products\\wireless_mouse.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\wireless_mouse.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebApplication1.props",
+      "PackagePath": "build\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication1.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebApplication1.props",
+      "PackagePath": "buildTransitive\\WebApplication1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
