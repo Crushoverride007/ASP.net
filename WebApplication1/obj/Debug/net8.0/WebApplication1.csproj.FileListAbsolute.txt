@@ -137,3 +137,7 @@ C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\We
 C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
 C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.staticwebassets.runtime.json
+C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\bin\Debug\net8.0\Scrutor.dll
+C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\youne\OneDrive\Documents\SUPINFO\B3 ENG\netcore\ibay\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

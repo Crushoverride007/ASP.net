@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
@@ -18,6 +19,7 @@ namespace WebApplication1.Controllers
             this.context = context;
         }
 
+        
         [HttpGet("subject")]
         public IActionResult GetSubjects() 
         {
@@ -25,6 +27,7 @@ namespace WebApplication1.Controllers
             return Ok(listSubjects); 
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult GetContacts(int? page) 
         {
@@ -54,6 +57,8 @@ namespace WebApplication1.Controllers
             return Ok(response);
         }
 
+
+        [Authorize(Roles = "admin")]
         [HttpGet("{id}")]
         public IActionResult GetContact(int id) 
         {
@@ -88,6 +93,7 @@ namespace WebApplication1.Controllers
             context.SaveChanges();
             return Ok(contact);
         }
+        /*
         [HttpPut("{id}")]
         public IActionResult UpdateContact(int id, ContactDto contactDto) 
         {
@@ -111,7 +117,9 @@ namespace WebApplication1.Controllers
             contact.Message = contactDto.Message;
             context.SaveChanges();
             return Ok(contact);
-        }
+        }*/
+
+        [Authorize(Roles = "admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id) 
         {

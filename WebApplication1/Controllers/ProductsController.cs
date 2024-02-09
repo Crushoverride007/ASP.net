@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using WebApplication1.Models;
@@ -16,7 +17,7 @@ namespace WebApplication1.Controllers
         private readonly List<string> listCategories = new List<string>()
         {
             "Smartphone","Computers","Accessories","Printers","Cameras","Other"
-        }; 
+        };
 
         public ProductsController(ApplicationDbContext context, IWebHostEnvironment env)
         {
@@ -35,23 +36,23 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public IActionResult GetProducts(string? search, string? category,
             int? minPrice, int? maxPrice,
-            string? sort, string? order, int? page )
+            string? sort, string? order, int? page)
         {
             IQueryable<Product> query = context.Products;
 
             //search functionnality
-            if (search != null) 
+            if (search != null)
             {
                 query = query.Where(p => p.Name.Contains(search) || p.Description.Contains(search));
             }
 
-            if(category != null) 
+            if (category != null)
             {
                 query = query.Where(p => p.Category == category);
             }
-            if (minPrice != null) 
+            if (minPrice != null)
             {
-                query = query.Where(p=> p.Price >= minPrice);
+                query = query.Where(p => p.Price >= minPrice);
             }
 
             if (maxPrice != null)
@@ -61,17 +62,17 @@ namespace WebApplication1.Controllers
 
             //sort functionality
             if (sort == null) sort = "id";
-            if (order == null || order != "asc") order = "desc"; 
-           
-            if (sort.ToLower() == "name") 
+            if (order == null || order != "asc") order = "desc";
+
+            if (sort.ToLower() == "name")
             {
-                if (order == "asc") 
+                if (order == "asc")
                 {
-                    query = query.OrderBy(p=> p.Name);
+                    query = query.OrderBy(p => p.Name);
                 }
                 else
                 {
-                    query = query.OrderByDescending(p=> p.Name);
+                    query = query.OrderByDescending(p => p.Name);
                 }
             }
 
@@ -122,7 +123,7 @@ namespace WebApplication1.Controllers
                 }
             }
 
-            else 
+            else
             {
                 if (order == "asc")
                 {
@@ -136,7 +137,7 @@ namespace WebApplication1.Controllers
 
             //pagination functionality
 
-            if (page == null || page < 1) page= 1;
+            if (page == null || page < 1) page = 1;
             int pageSize = 5;
             int totalPages = 0;
             decimal count = query.Count();
@@ -168,17 +169,18 @@ namespace WebApplication1.Controllers
             return Ok(product);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult CreateProduct([FromForm] ProductDto productDto)
         {
-            if (!listCategories.Contains(productDto.Category)) 
+            if (!listCategories.Contains(productDto.Category))
             {
                 ModelState.AddModelError("Category", "Please select a valid category");
                 return BadRequest(ModelState);
             }
 
 
-            if (productDto.ImageFile == null) 
+            if (productDto.ImageFile == null)
             {
                 ModelState.AddModelError("ImageFile", "The Image File is required");
                 return BadRequest(ModelState);
@@ -190,7 +192,7 @@ namespace WebApplication1.Controllers
 
             string imageFolder = env.WebRootPath + "/images/products/";
 
-            using (var stream = System.IO.File.Create(imageFolder + imageFileName)) 
+            using (var stream = System.IO.File.Create(imageFolder + imageFileName))
             {
                 productDto.ImageFile.CopyTo(stream);
             }
@@ -202,7 +204,7 @@ namespace WebApplication1.Controllers
                 Brand = productDto.Brand,
                 Category = productDto.Category,
                 Price = productDto.Price,
-                Description = productDto.Description ??"",
+                Description = productDto.Description ?? "",
                 ImageFileName = imageFileName,
                 CreatedAt = DateTime.Now
             };
@@ -211,8 +213,9 @@ namespace WebApplication1.Controllers
 
             return Ok(product);
         }
+        [Authorize(Roles = "admin")]
         [HttpPut("{id}")]
-        public IActionResult UpdateProduct(int id, [FromForm] ProductDto productDto) 
+        public IActionResult UpdateProduct(int id, [FromForm] ProductDto productDto)
         {
             if (!listCategories.Contains(productDto.Category))
             {
@@ -221,19 +224,19 @@ namespace WebApplication1.Controllers
             }
 
             var product = context.Products.Find(id);
-            if (product == null) 
+            if (product == null)
             {
                 return NotFound();
             }
             string imageFileName = product.ImageFileName;
-            if (productDto.ImageFile != null) 
+            if (productDto.ImageFile != null)
             {
                 //save the image on the server
                 imageFileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
                 imageFileName += Path.GetExtension(productDto.ImageFile.FileName);
 
                 string imageFolder = env.WebRootPath + "/images/products/";
-                using (var stream = System.IO.File.Create(imageFolder +imageFileName)) 
+                using (var stream = System.IO.File.Create(imageFolder + imageFileName))
                 {
                     productDto.ImageFile.CopyTo(stream);
                 }
@@ -245,17 +248,18 @@ namespace WebApplication1.Controllers
             product.Brand = productDto.Brand;
             product.Category = productDto.Category;
             product.Price = productDto.Price;
-            product.Description = productDto.Description ??"";
+            product.Description = productDto.Description ?? "";
             product.ImageFileName = imageFileName;
             context.SaveChanges();
 
             return Ok(product);
         }
+        [Authorize(Roles = "admin")]
         [HttpDelete("{id}")]
-        public IActionResult DeleteProduct(int id) 
+        public IActionResult DeleteProduct(int id)
         {
             var product = context.Products.Find(id);
-            if(product == null) 
+            if (product == null)
             {
                 return NotFound();
             }
@@ -271,5 +275,3 @@ namespace WebApplication1.Controllers
         }
     }
 }
-
-
